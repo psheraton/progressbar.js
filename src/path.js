@@ -104,7 +104,7 @@ Path.prototype.animate = function animate(progress, opts, cb) {
 
     var self = this;
     this._tweenable = new Tweenable();
-    this._tweenable.tween({
+    return this._tweenable.tween({
         from: utils.extend({ offset: offset }, values.from),
         to: utils.extend({ offset: newOffset }, values.to),
         duration: opts.duration,
